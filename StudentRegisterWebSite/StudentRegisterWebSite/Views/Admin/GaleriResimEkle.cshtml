@@ -1,0 +1,50 @@
+﻿@model StudentRegisterWebSite.Models.Siniflar.Galeri
+@{
+    ViewBag.Title = "GaleriResimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Galeri Resim Ekleme Sayfası</h2>
+<br />
+
+@using (Html.BeginForm("GaleriResimEkle", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <h3>Galeri Görsel</h3>
+    <br /> 
+    <input type="file" name="ResimUrl" />
+
+    <br />
+    <input type="submit" name="Kaydet" />
+}
+
+
+<!--Card
+
+
+    <div class="card indigo text-center z-depth-2 light-version py-4 px-5">
+        <hr class="w-100 my-4">
+
+        <div class="file-field">
+            <div class="btn btn-outline-white btn-rounded waves-effect btn-sm float-left">
+                <span>Dosyayı Seçin<i class="fas fa-cloud-upload-alt ml-3" aria-hidden="true"></i></span>
+                <input type="file" name="ResimUrl" multiple>
+            </div>
+            <div class="file-path-wrapper">
+                <input class="file-path validate text-white" type="text" placeholder="Bir veya birden fazla dosya yükleyiniz...">
+            </div>
+        </div>
+    </div>
+        <link href="~/resimuploadcss/style.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+    -->

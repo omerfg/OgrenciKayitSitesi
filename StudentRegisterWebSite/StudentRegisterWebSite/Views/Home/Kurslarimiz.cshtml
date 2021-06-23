@@ -1,0 +1,24 @@
+﻿@using StudentRegisterWebSite.Models.Siniflar
+@model List<Kurslar>
+
+    <section class="branches py-5" id="courses">
+        <div class="container py-xl-5 py-lg-3">
+            <h3 class="title-w3 mb-5 text-center font-weight-bold">Kurslarımız</h3>
+            <div class="row branches-position pt-lg-4">
+                @foreach (var x in Model)
+                {
+                    <div class="col-lg-3 col-sm-6 place-w3">
+                        <!-- branch-img -->
+                        <div class="team-img team-img-@x.ID">
+                            <div class="team-content">
+
+                                <h4 class="text-wh">@x.KursAdi</h4>
+                                <p class="team-meta">@x.Aciklama</p>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                </div>
+            </div>
+    </section>

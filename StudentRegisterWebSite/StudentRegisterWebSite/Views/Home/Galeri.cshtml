@@ -1,0 +1,26 @@
+﻿@using StudentRegisterWebSite.Models.Siniflar
+@model List<Galeri> 
+<div class="gallery-cont text-center pb-5" id="gallery">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title-w3 mb-sm-5 mb-4 text-center text-bl font-weight-bold">Galeri</h3>
+       
+        <div class="row news-grids text-center no-gutters">
+            @foreach (var x in Model)
+            {
+                <div class="col-md-4 gal-img">
+                    <a href="#gal1"><img src="@x.ResimUrl" alt="Gallery Image" class="img-fluid"></a>
+                </div>
+            }
+            </div>
+        @*<div id="gal1" class="pop-overlay animate">
+            <div class="popup">
+                <img src="~/web/images/g1.jpg" alt="Popup Image" class="img-fluid" />
+                <p class="mt-4">
+                    @x.Aciklama
+                </p>
+                <a class="close" href="#gallery">&times;</a>
+            </div>
+        </div>*@  
+
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@using StudentRegisterWebSite.Models.Siniflar
+@model List<Duyuru>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h3>Duyuru Sayfası</h3>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Açıklama</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Baslik</td>
+            <td>@x.Aciklama</td>
+            <td>@x.Tarih.ToString("yyyy.MM.dd")</td>
+            <td><a class="btn btn-danger" href="/Admin/DuyuruSil/@x.ID">Sil</a></td>
+            <td><a class="btn btn-warning" href="/Admin/DuyuruGetir/@x.ID">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniDuyuru/" class="btn btn-primary">Yeni</a>

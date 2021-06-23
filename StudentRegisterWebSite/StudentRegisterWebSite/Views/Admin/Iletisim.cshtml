@@ -1,0 +1,25 @@
+﻿@using StudentRegisterWebSite.Models.Siniflar
+@model List<Iletisim>
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>İletişim Listeleme Sayfası</h2>
+<br/>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Ad ve Soyad</th>
+        <th>Mail</th>
+        <th>Konu</th>
+        <th>Mesaj</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+        </tr>
+    }
+    
+</table>

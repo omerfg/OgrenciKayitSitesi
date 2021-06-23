@@ -1,0 +1,23 @@
+﻿@using StudentRegisterWebSite.Models.Siniflar
+@model List<Galeri>
+@{
+    ViewBag.Title = "Galeri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h2>Galeri Listeleme Sayfası</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Resim URL</th>
+        <th>Resim Sil</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ResimUrl</td>
+            <th><a href="/Admin/GaleriResimSil/@x.ID" class="btn btn-danger">Sil</a></th>
+
+        </tr>
+    }
+</table>
+<a href="/Admin/GaleriResimEkle/" class="btn btn-primary">Yeni</a>
+

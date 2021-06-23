@@ -1,0 +1,31 @@
+﻿@using StudentRegisterWebSite.Models.Siniflar
+@model List<Duyuru>
+<section class="blog_w3ls py-5" id="events">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title-w3 mb-5 text-center font-weight-bold">Duyurular</h3>
+        <div class="row mt-4">
+            @foreach (var x in Model)
+            {
+                <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                    <div class="card">
+                        <div class="card-header m-0">
+                            <h5 class="blog-title card-title m-0">
+                                <a href="single.html">@x.Baslik</a>
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="text-left">
+                                @x.Aciklama
+                            </p>
+                        </div>
+                        <div class="card-footer blog_w3icon border-top pt-2 mt-3 d-flex justify-content-between">
+                            <span>
+                                @x.Tarih.ToString("dd.MM.yyyy")
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+    </div>
+</section>
